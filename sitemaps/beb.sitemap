@@ -1,0 +1,24 @@
+sitemap beb label="Benvenuto al B&B di Via Rialto" 
+{
+  //  Text label="Stato Generale" icon="groundfloor" {	
+    Frame label="Stato Generale" {
+        Text item=SerieFinestre
+        Text item=RilevatoriFumo
+        Switch item=Condizionatore1
+        Switch item=Condizionatore2
+	      Default item=PotenzaCDZ1
+	      Default item=EnergiaCDZ1
+        Default item=PotenzaCDZ2
+	      Default item=EnergiaCDZ2   
+    }
+
+ //  Text label="Effemeridi" icon="sun"{
+        Frame label="Effemeridi" {
+        Text item=SunElevation
+        Text item=SunRise
+        Text item=SunSet
+    }
+}
+// Mapview item=Location height=10
+
+

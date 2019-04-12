@@ -1,0 +1,63 @@
+rule "Invio stato finestre"
+when
+    Item SerieFinestre changed
+then
+    if (SerieFinestre.state == OFF) {
+        sendTelegram("bot_max", "Finestre chiuse!")
+        sendTelegram("bot_sa", "Finestre chiuse!")
+        sendTelegram("bot_massimo", "Finestre chiuse!")
+    }
+    else {
+       sendTelegram("bot_max", "Finestre aperte!")
+       sendTelegram("bot_sa", "Finestre aperte!")
+       sendTelegram("bot_massimo", "Finestre aperte!")
+    }
+end
+
+rule "Invio stato fumo"
+when
+    Item RilevatoriFumo changed
+then
+    if (RilevatoriFumo.state == OFF) {
+        sendTelegram("bot_max", "Assenza Fumo!")
+        sendTelegram("bot_sa", "Assenza Fumo!")
+        sendTelegram("bot_massimo", "Assenza Fumo!")
+    }
+    else {
+       sendTelegram("bot_max", "Presenza FUMO!")
+       sendTelegram("bot_sa", "Presenza FUMO!")
+       sendTelegram("bot_massimo", "Presenza FUMO!")
+    }
+end
+
+rule "Stato relè condizionatore 1"
+when
+    Item Condizionatore1 changed
+then
+    if (Condizionatore1.state == OFF)  {
+        sendTelegram("bot_max", "Condizionatore 1 senza alimentazione!")
+        sendTelegram("bot_sa", "Condizionatore 1 senza alimentazione!") 
+        sendTelegram("bot_massimo", "Condizionatore 1 senza alimentazione!")
+    }
+    else {
+       sendTelegram("bot_max", "Condizionatore 1 alimentato!") 
+       sendTelegram("bot_sa", "Condizionatore 1 alimentato!")
+       sendTelegram("bot_massimo", "Condizionatore 1 alimentato!")
+    }
+end
+
+rule "Stato relè condizionatore 2"
+when
+    Item Condizionatore2 changed
+then
+    if (Condizionatore2.state == OFF) {
+        sendTelegram("bot_max", "Condizionatore 2 senza alimentazione!")
+        sendTelegram("bot_sa", "Condizionatore 2 senza alimentazione!")
+        sendTelegram("bot_massimo", "Condizionatore 2 senza alimentazione!")
+    }
+    else {
+       sendTelegram("bot_max", "Condizionatore 2 alimentato!")
+       sendTelegram("bot_sa", "Condizionatore 2 alimentato!")
+       sendTelegram("bot_massimo", "Condizionatore 2 alimentato!")
+    }
+end

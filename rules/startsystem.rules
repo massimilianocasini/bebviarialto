@@ -1,0 +1,6 @@
+rule InitializeSystem
+    when
+        System started
+    then
+        Location.postUpdate(new PointType("41.901004,12.43666"))
+    end
