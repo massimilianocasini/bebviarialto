@@ -1,0 +1,41 @@
+rule "zwave:device:05463742:node2"
+when Thing "zwave:device:05463742:node2" changed
+// to “OFFLINE (COMMUNICATION_ERROR)“
+then
+val String thingUID = "zzwave:device:05463742:node2"
+var thingStatusInfo = getThingStatusInfo(thingUID)
+// && (thingStatusInfo.getStatus().toString() == "ONLINE")) {
+    if (thingStatusInfo !== null) {
+        sendTelegram("bot_max", thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 002: FGS213 Single Switch 2 CDZ1")
+		sendTelegram("bot_massimo", thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 002: FGS213 Single Switch 2 CDZ1")
+        logError("", "Thing status: " + thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 002: FGS213 Single Switch 2 CDZ1")
+    } return
+end
+
+rule "zwave:device:05463742:node3"
+when Thing "zwave:device:05463742:node3" changed
+// to “OFFLINE (COMMUNICATION_ERROR)“
+then
+val String thingUID = "zwave:device:05463742:node3"
+var thingStatusInfo = getThingStatusInfo(thingUID)
+// && (thingStatusInfo.getStatus().toString() == "ONLINE")) {
+    if (thingStatusInfo !== null) {
+        sendTelegram("bot_max", thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 003: FGBS001 Universal Binary Sensor")
+		sendTelegram("bot_massimo", thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 003: FGBS001 Universal Binary Sensor")
+        logError("", "Thing status: " + thingUID + " " + thingStatusInfo.getStatus().toString() )
+    } return
+end
+
+rule "zwave:device:05463742:node4"
+when Thing "zwave:device:05463742:node4" changed
+// to “OFFLINE (COMMUNICATION_ERROR)“
+then
+val String thingUID = "zwave:device:05463742:node4"
+var thingStatusInfo = getThingStatusInfo(thingUID)
+// && (thingStatusInfo.getStatus().toString() == "ONLINE")) {
+    if (thingStatusInfo !== null) {
+        sendTelegram("bot_max", thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 004: FGS213 Single Switch 2 CDZ2")
+		sendTelegram("bot_massimo", thingUID + " " + thingStatusInfo.getStatus().toString() + " Z-Wave Node 004: FGS213 Single Switch 2 CDZ2")
+        logError("", "Thing status: " + thingUID + " " + thingStatusInfo.getStatus().toString() )
+    } return
+end

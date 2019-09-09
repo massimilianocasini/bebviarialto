@@ -1,4 +1,6 @@
 OFF=OK
 ON=Presenza Fumo
+CLOSED=OK
+OPEN=Presenza Fumo
 -=No input
 NULL=No input

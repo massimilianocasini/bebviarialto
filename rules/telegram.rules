@@ -6,11 +6,15 @@ then
         sendTelegram("bot_max", "Finestre chiuse!")
         sendTelegram("bot_sa", "Finestre chiuse!")
         sendTelegram("bot_massimo", "Finestre chiuse!")
+        Condizionatore1.sendCommand(ON)
+        Condizionatore2.sendCommand(ON)
     }
     else {
        sendTelegram("bot_max", "Finestre aperte!")
        sendTelegram("bot_sa", "Finestre aperte!")
        sendTelegram("bot_massimo", "Finestre aperte!")
+       Condizionatore1.sendCommand(OFF)
+       Condizionatore2.sendCommand(OFF)
     }
 end
 

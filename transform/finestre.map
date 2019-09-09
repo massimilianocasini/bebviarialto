@@ -1,4 +1,6 @@
 OFF=Chiuse
 ON=Aperte
+CLOSED=Chiuse
+OPEN=Aperte
 -=No input
 NULL=No input

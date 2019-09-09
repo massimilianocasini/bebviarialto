@@ -3,7 +3,7 @@ sitemap beb label="Benvenuto al B&B di Via Rialto"
   //  Text label="Stato Generale" icon="groundfloor" {	
     Frame label="Stato Generale" {
         Text item=SerieFinestre
-        Text item=RilevatoriFumo
+        Text item=RivelatoriFumo
         Switch item=Condizionatore1
         Switch item=Condizionatore2
 	      Default item=PotenzaCDZ1
