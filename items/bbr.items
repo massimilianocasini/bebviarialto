@@ -1,13 +1,13 @@
-//Z-Wave Node 003: FGS213 Single Switch 2
+// Z-Wave Node 003: FGS213 Single Switch 2
 Switch Condizionatore1 "Condizionatore 1" <switch> {channel="zwave:device:469e7792:node3:switch_binary1"}
 Number EnergiaCDZ1 "Energia consumata CDZ1 [%.1f kWh]" <energy> {channel="zwave:device:469e7792:node3:meter_kwh"}
 Number PotenzaCDZ1 "Potenza attuale CDZ1 [%.1f W]" <energy> {channel="zwave:device:469e7792:node3:meter_watts"}
 
-//Z-Wave Node 004: FGS213 Single Switch 2
+// Z-Wave Node 004: FGS213 Single Switch 2
 Switch Condizionatore2 "Condizionatore 2" <switch>  {channel="zwave:device:469e7792:node4:switch_binary1"}
 Number EnergiaCDZ2 "Energia consumata CDZ2 [%.1f kWh]" <energy> {channel="zwave:device:469e7792:node4:meter_kwh"}
 Number PotenzaCDZ2 "Potenza attuale CDZ2 [%.1f W]" <energy> {channel="zwave:device:469e7792:node4:meter_watts"}
 
-//Z-Wave Node 008: FGBS001 Universal Binary Sensor
+// Z-Wave Node 008: FGBS001 Universal Binary Sensor
 Switch SerieFinestre "Serie Finestre [MAP(finestre.map):%s]" <window> {channel="zwave:device:469e7792:node8:sensor_binary1"}
 Switch RivelatoriFumo "Rivelatori di fumo [MAP(fumo.map):%s]" <smoke> {channel="zwave:device:469e7792:node8:sensor_binary2"}
